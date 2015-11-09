@@ -1,0 +1,15 @@
+[submodule "haskellquadratic_tt1215"]
+	path = haskellquadratic_tt1215
+	url = https://gitlab.doc.ic.ac.uk/lab1516_autumn/haskellquadratic_tt1215.git
+[submodule "haskellrecursion_tt1215"]
+	path = haskellrecursion_tt1215
+	url = https://gitlab.doc.ic.ac.uk/lab1516_autumn/haskellrecursion_tt1215.git
+[submodule "haskellmacroprocessor_tt1215"]
+	path = haskellmacroprocessor_tt1215
+	url = https://gitlab.doc.ic.ac.uk/lab1516_autumn/haskellmacroprocessor_tt1215.git
+[submodule "haskelllsystems_tt1215"]
+	path = haskelllsystems_tt1215
+	url = https://gitlab.doc.ic.ac.uk/lab1516_autumn/haskelllsystems_tt1215.git
+[submodule "haskellcalculus_tt1215"]
+	path = haskellcalculus_tt1215
+	url = https://gitlab.doc.ic.ac.uk/lab1516_autumn/haskellcalculus_tt1215.git
