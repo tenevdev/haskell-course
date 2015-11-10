@@ -109,6 +109,8 @@ buildOpApp ((r:l:exps), (op:ops))
   = ((app:exps), ops)
   where
     app = App (Op op) l r
+buildOpApp s
+  = s
 
 parse :: [Token] -> (ExprStack, OpStack) -> Expr
 parse [] ([final], _)
@@ -121,7 +123,12 @@ parse (t:ts) (exps, allOps@(op:_))
       _     -> parse ts (t:exps, allOps)
       where
         processOperator to
+          | to == ')'        = encloseExpression (exps, allOps)
           | supersedes to op = (exps, to:allOps)
           | otherwise        = (newExps, to:newOps)
             where
               (newExps, newOps) = buildOpApp (exps, allOps)
+
+        encloseExpression (exps, allOps@(op:ops))
+          | op == '(' = (exps, ops)
+          | otherwise = encloseExpression $ buildOpApp (exps, allOps)
